@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "login": "Zaloguj się",
+    "signup": "Zarejestruj się",
+    "settings": "Ustawienia",
+    "logout": "Wyloguj się"
+  },
+  "settings": {
+    "settings": "Ustawienia",
+    "changeWorkingTime": "Zmień czas pracy",
+    "changeDefaultBookingData": "Zmień domyślne dane rezerwacji",
+    "changePassword": "Zmień hasło",
+    "deleteAccount": "Usuń konto",
+    "notAvailable": "Niedostępne po zalogowaniu się przez Google"
+  },
+  "bookingCard": {
+    "day": "Dzień:",
+    "hour": "Godzina:",
+    "email": "Email:",
+    "fullName": "Imię i nazwisko:",
+    "mobileNumber": "Telefon:",
+    "edit": "Edytuj",
+    "cancel": "Odwołaj"
+  },
+  "bookings": {
+    "myBookings": "Moje rezerwacje",
+    "filters": "Filtry",
+    "clearFilters": "Wyczyść filtry",
+    "selectDate": "Wybierz datę",
+    "all": "Wszystkie",
+    "selectName": "Wybierz imię",
+    "sort": "Sortuj",
+    "ascending": "Rosnąco",
+    "descending": "Malejąco",
+    "booking": "Rezerwacja",
+    "completed": "Zrealizowane",
+    "signIn": "Zaloguj",
+    "or": " lub ",
+    "signUp": "zarejestruj się",
+    "toSeeYourBookings": " aby zobaczyć swoje rezerwacje"
+  },
+  "bookingForm": {
+    "email": "Email",
+    "enterEmail": "Wprowadź email",
+    "fullName": "Imię i nazwisko",
+    "enterFullName": "Imię i nazwisko",
+    "mobileNumber": "Telefon",
+    "enterMobileNumber": "Wprowadź nr telefonu",
+    "rememberMyData": "Zapamiętaj moje dane",
+    "day": "Dzień",
+    "hour": "Godzina",
+    "update": "Aktualizuj",
+    "submit": "Wyślij"
+  },
+  "defaultBookingData": {
+    "changeDefaultBookingData": "Zmień domyślne dane rezerwacji",
+    "fullName": "Imię i nazwisko",
+    "mobileNumber": "Numer telefonu",
+    "submit": "Potwierdź"
+  },
+  "login": {
+    "login": "Zaloguj się",
+    "email": "Email",
+    "password": "Hasło",
+    "signInWithGoogle": "Zaloguj się przez Google"
+  },
+  "signup": {
+    "passwordsDontMatch": "Hasła się nie są zgodne.",
+    "signup": "Załóż konto",
+    "email": "Email",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "signUpWithGoogle": "Zarejestruj się przez Google"
+  },
+  "workingTime": {
+    "changeWorkingTime": "Zmień czas pracy",
+    "startHour": "Godzina rozpoczęcia",
+    "endHour": "Godzina zakończenia",
+    "visitDuration": "Czas trwania wizyty (min)",
+    "submit": "Potwierdź"
+  },
+  "changePassword": {
+    "changePassword": "Zmień hasło",
+    "oldPassword": "Stare hasło",
+    "newPassword": "Nowe hasło",
+    "confirmNewPassword": "Potwierdź nowe hasło",
+    "submit": "Potwierdź",
+    "passwordsDontMatch": "Hasła się nie są zgodne."
+  },
+  "deleteAccount": {
+    "deleteAccount": "Usuń konto",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "passwordsDontMatch": "Hasła się nie są zgodne.",
+    "submit": "Usuń konto"
+  }
+}

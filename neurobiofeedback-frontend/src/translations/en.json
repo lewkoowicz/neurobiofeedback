@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "login": "Sign in",
+    "signup": "Sign up",
+    "settings": "Settings",
+    "logout": "Sign out"
+  },
+  "settings": {
+    "settings": "Settings",
+    "changeWorkingTime": "Change working time",
+    "changeDefaultBookingData": "Change default booking data",
+    "changePassword": "Change password",
+    "deleteAccount": "Delete account",
+    "notAvailable": "Not available when signed in with Google"
+  },
+  "bookingCard": {
+    "day": "Day:",
+    "hour": "Hour:",
+    "email": "Email:",
+    "fullName": "Full name:",
+    "mobileNumber": "Mobile number:",
+    "edit": "Edit",
+    "cancel": "Cancel"
+  },
+  "bookings": {
+    "myBookings": "My bookings",
+    "filters": "Filters",
+    "clearFilters": "Clear filters",
+    "selectDate": "Select date",
+    "all": "All",
+    "selectName": "Select name",
+    "sort": "Sort",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "booking": "Booking",
+    "completed": "Completed",
+    "signIn": "Sign in",
+    "or": " or ",
+    "signUp": "sign up",
+    "toSeeYourBookings": " to see Your bookings"
+  },
+  "bookingForm": {
+    "email": "Email",
+    "enterEmail": "Enter email",
+    "fullName": "Full name",
+    "enterFullName": "Enter first and last name",
+    "mobileNumber": "Mobile number",
+    "enterMobileNumber": "Enter mobile number",
+    "rememberMyData": "Remember my data",
+    "day": "Day",
+    "hour": "Hour",
+    "update": "Update",
+    "submit": "Submit"
+  },
+  "defaultBookingData": {
+    "changeDefaultBookingData": "Change default booking data",
+    "fullName": "Full name",
+    "mobileNumber": "Mobile number",
+    "submit": "Submit"
+  },
+  "login": {
+    "login": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "signInWithGoogle": "Sign in with Google"
+  },
+  "signup": {
+    "passwordsDontMatch": "Passwords don't match.",
+    "signup": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "signUpWithGoogle": "Sign up with Google"
+  },
+  "workingTime": {
+    "changeWorkingTime": "Change working time",
+    "startHour": "Start hour",
+    "endHour": "End hour",
+    "visitDuration": "Visit duration (min)",
+    "submit": "Submit"
+  },
+  "changePassword": {
+    "changePassword": "Change password",
+    "oldPassword": "Old password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "submit": "Submit",
+    "passwordsDontMatch": "Passwords don't match."
+  },
+  "deleteAccount": {
+    "deleteAccount": "Delete account",
+    "password": "Password",
+    "passwordsDontMatch": "Passwords don't match.",
+    "confirmPassword": "Confirm password",
+    "submit": "Delete account"
+  }
+}
