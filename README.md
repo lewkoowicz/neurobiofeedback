@@ -19,8 +19,7 @@ This application allows patients to easily book, manage, and track their appoint
 - Google sign-in integration
 - Email confirmations using JavaMailSender
 - Audit functionality
-- JPA (Java Persistence API)
-- PostgreSQL database
+- PostgreSQL
 
 ### Frontend 💻
 - TypeScript
