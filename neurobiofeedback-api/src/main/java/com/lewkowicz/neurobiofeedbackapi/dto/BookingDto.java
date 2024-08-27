@@ -21,7 +21,7 @@ public class BookingDto {
     private LocalDateTime bookingDate;
 
     @NotEmpty(message = "validation.fullNameNotEmpty")
-    @Pattern(regexp = "^[a-zA-Z]+ [a-zA-Z]+$", message = "validation.fullNameInvalid")
+    @Pattern(regexp = "^\\p{L}+(?: \\p{L}+)?$", message = "validation.fullNameInvalid")
     private String fullName;
 
     @NotEmpty(message = "validation.mobileNumberNotEmpty")
@@ -30,6 +30,14 @@ public class BookingDto {
 
     public void setFullName(String fullName) {
         this.fullName = fullName != null ? fullName.trim() : null;
+    }
+
+    public void setEmail(String email) {
+        this.email = email != null ? email.trim() : null;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber != null ? mobileNumber.trim() : null;
     }
 
 }
