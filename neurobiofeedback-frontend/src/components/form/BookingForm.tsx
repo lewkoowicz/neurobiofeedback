@@ -47,10 +47,15 @@ const BookingForm = () => {
     const now = new Date();
     const currentHour = now.getHours();
 
-    const isWeekend = (dateStr: string) => {
+    const isSunday = (dateStr: string) => {
         const date = new Date(dateStr);
         const day = date.getDay();
-        return day === 0 || day === 6;
+        return day === 0;
+    };
+
+    const isSaturday = (dateStr: string) => {
+        const date = new Date(dateStr);
+        return date.getDay() === 6;
     };
 
     const formatDate = (dateStr: string) => {
@@ -88,15 +93,21 @@ const BookingForm = () => {
     }, [isEditMode, role, emailParam]);
 
     useEffect(() => {
-        fetchWorkingTime(1, token)
-            .then(data => {
-                if (date === today) {
-                    setTimeOptions(generateTimeSlots(currentHour + 1, data.endHour, data.intervalMinutes));
-                } else {
-                    setTimeOptions(generateTimeSlots(data.startHour, data.endHour, data.intervalMinutes));
-                }
-            })
-            .catch(error => console.error('Failed to fetch working time', error));
+        if (date) {
+            if (isSaturday(date)) {
+                setTimeOptions(generateTimeSlots(10, 13, 60));
+            } else {
+                fetchWorkingTime(1, token)
+                    .then(data => {
+                        if (date === today) {
+                            setTimeOptions(generateTimeSlots(currentHour + 1, data.endHour, data.intervalMinutes));
+                        } else {
+                            setTimeOptions(generateTimeSlots(data.startHour, data.endHour, data.intervalMinutes));
+                        }
+                    })
+                    .catch(error => console.error('Failed to fetch working time', error));
+            }
+        }
     }, [token, date, today, currentHour]);
 
     useEffect(() => {
@@ -136,7 +147,7 @@ const BookingForm = () => {
 
     const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedDate = e.target.value;
-        if (!isWeekend(selectedDate)) {
+        if (!isSunday(selectedDate)) {
             setDate(selectedDate);
         } else {
             setAlertType("error");
