@@ -160,12 +160,6 @@ const Bookings = () => {
 
     const uniqueNames = getFilteredNames();
 
-    const clearFilters = () => {
-        setFilterDate('');
-        setFilterName('');
-        setSortOrder('asc');
-    };
-
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold text-center mb-8 text-primary">{t.bookings.myBookings}</h1>
@@ -182,13 +176,6 @@ const Bookings = () => {
                             <span>{t.bookings.filters}</span>
                         </div>
                         <div className="dropdown-content z-10">
-                            <button className="mt-4 btn w-40" onClick={clearFilters}>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                                </svg>
-                                {t.bookings.clearFilters}
-                            </button>
                             <select value={filterDate} onChange={handleDateChange}
                                     className="select select-bordered mt-2 w-40">
                                 <option value="" disabled selected hidden>{t.bookings.selectDate}</option>
