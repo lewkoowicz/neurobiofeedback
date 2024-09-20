@@ -62,7 +62,9 @@
     "login": "Sign in",
     "email": "Email",
     "password": "Password",
-    "signInWithGoogle": "Sign in with Google"
+    "signInWithGoogle": "Sign in with Google",
+    "noAccount": "You don't have an account yet?",
+    "signup": "Sign up now"
   },
   "signup": {
     "passwordsDontMatch": "Passwords don't match.",

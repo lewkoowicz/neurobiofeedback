@@ -62,7 +62,9 @@
     "login": "Zaloguj się",
     "email": "Email",
     "password": "Hasło",
-    "signInWithGoogle": "Zaloguj się przez Google"
+    "signInWithGoogle": "Zaloguj się przez Google",
+    "noAccount": "Nie masz jeszcze konta?",
+    "signup": "Zarejestruj się teraz"
   },
   "signup": {
     "passwordsDontMatch": "Hasła się nie są zgodne.",
