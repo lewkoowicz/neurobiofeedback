@@ -121,10 +121,13 @@ const Bookings = () => {
             now.setSeconds(0, 0);
             const bookingDateTime = new Date(booking.day.split('-').reverse().join('-') + 'T' + booking.time);
 
-            if (filterDate === 'completed') {
-                return bookingDateTime < now;
-            }
-            return bookingDateTime >= now && booking.day.includes(filterDate) && booking.fullName.includes(filterName);
+            const matchesDate = filterDate === 'completed'
+                ? bookingDateTime < now
+                : filterDate === '' ? bookingDateTime >= now : booking.day === filterDate;
+
+            const matchesName = filterName === '' || booking.fullName.toLowerCase().includes(filterName.toLowerCase());
+
+            return matchesDate && matchesName;
         })
         .sort((a, b) => {
             const dateA = new Date(a.day.split('-').reverse().join('-') + 'T' + a.time);
@@ -136,6 +139,32 @@ const Bookings = () => {
             }
             return 0;
         });
+
+    const getFilteredNames = () => {
+        const now = new Date();
+        now.setSeconds(0, 0);
+        return [...new Set(bookingsData
+            .filter(booking => {
+                const bookingDateTime = new Date(booking.day.split('-').reverse().join('-') + 'T' + booking.time);
+                if (filterDate === 'completed') {
+                    return bookingDateTime < now;
+                } else if (filterDate === '') {
+                    return bookingDateTime >= now;
+                } else {
+                    return booking.day === filterDate;
+                }
+            })
+            .map(booking => booking.fullName)
+        )].sort();
+    };
+
+    const uniqueNames = getFilteredNames();
+
+    const clearFilters = () => {
+        setFilterDate('');
+        setFilterName('');
+        setSortOrder('asc');
+    };
 
     return (
         <div className="container mx-auto p-4">
@@ -153,6 +182,13 @@ const Bookings = () => {
                             <span>{t.bookings.filters}</span>
                         </div>
                         <div className="dropdown-content z-10">
+                            <button className="mt-4 btn w-40" onClick={clearFilters}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                                {t.bookings.clearFilters}
+                            </button>
                             <select value={filterDate} onChange={handleDateChange}
                                     className="select select-bordered mt-2 w-40">
                                 <option value="" disabled selected hidden>{t.bookings.selectDate}</option>
@@ -166,11 +202,9 @@ const Bookings = () => {
                                     className="select select-bordered mt-2 w-40">
                                 <option value="" disabled selected hidden>{t.bookings.selectName}</option>
                                 <option value="">{t.bookings.all}</option>
-                                {[...new Set(bookingsData.map(booking => booking.fullName))]
-                                    .sort()
-                                    .map(name => (
-                                        <option key={name} value={name}>{name}</option>
-                                    ))}
+                                {uniqueNames.map(name => (
+                                    <option key={name} value={name}>{name}</option>
+                                ))}
                             </select>
                         </div>
                     </div>
